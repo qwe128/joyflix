@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import type { Metadata, Viewport } from 'next';
-import { Inter } from 'next/font/google';
-
 import './globals.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
+import { headers } from 'next/headers'; // 导入 headers
 
 import { getConfig } from '@/lib/config';
 import RuntimeConfig from '@/lib/runtime';
@@ -13,7 +15,6 @@ import { GlobalErrorIndicator } from '../components/GlobalErrorIndicator';
 import { SiteProvider } from '../components/SiteProvider';
 import { ThemeProvider } from '../components/ThemeProvider';
 import ThemeStatusBar from '../components/ThemeStatusBar';
-import { headers } from 'next/headers'; // 导入 headers
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -130,6 +131,7 @@ export default async function RootLayout({
             <GlobalErrorIndicator />
           </SiteProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
