@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps, @typescript/eslint-no-explicit-any */
+/* eslint-disable react-hooks/exhaustive-deps, @typescript-eslint/no-explicit-any */
 'use client';
 
 import React, { Suspense, useEffect, useMemo, useState } from 'react';
@@ -263,7 +263,7 @@ const SearchPageClient: React.FC = () => {
       console.error('Search failed:', error);
       setSearchResults([]);
     } finally {
-      // 确保在流程最后（如无结果时）骨架屏和流状态也能被关闭
+      // 确保在流程最后（如无结果时）骨架屏和流状态也��被关闭
       setIsLoading(false);
       setIsStreaming(false);
     }
@@ -330,7 +330,7 @@ const SearchPageClient: React.FC = () => {
         behavior: 'smooth',
       });
     } catch (error) {
-      // 如果平滑滚动完全失败，使用立即滚动
+      // 如果平滑滚动完全失败，��用立即滚动
       document.body.scrollTop = 0;
     }
   };
