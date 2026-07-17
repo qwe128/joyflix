@@ -24,7 +24,7 @@ function isAndroid(userAgent: string): boolean {
 
 // 动态生成 metadata，支持配置更新后的标题变化
 export async function generateMetadata(): Promise<Metadata> {
-  let siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix';
+  let siteName = process.env.NEXT_PUBLIC_SITE_NAME || '阿赞';
   if (process.env.NEXT_PUBLIC_STORAGE_TYPE !== 'upstash') {
     const config = await getConfig();
     siteName = config.SiteConfig.SiteName;
@@ -50,7 +50,7 @@ export default async function RootLayout({
   const userAgent = headersList.get('user-agent') || '';
   const isAndroidDevice = isAndroid(userAgent);
 
-  let siteName = process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix';
+  let siteName = process.env.NEXT_PUBLIC_SITE_NAME || '阿赞';
   let announcement =
     process.env.ANNOUNCEMENT || '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰';
   let doubanProxyType = process.env.NEXT_PUBLIC_DOUBAN_PROXY_TYPE || 'direct';
