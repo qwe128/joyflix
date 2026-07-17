@@ -18,7 +18,7 @@ const SiteContext = createContext<{
   isSerialSpeedTest: boolean;
   setIsSerialSpeedTest: Dispatch<SetStateAction<boolean>>;
 }>({
-  siteName: 'JoyFlix',
+  siteName: '阿赞',
   announcement: '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰',
   mainContainerRef: undefined,
   isSerialSpeedTest: false,
