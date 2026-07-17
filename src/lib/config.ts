@@ -168,7 +168,7 @@ async function initConfig() {
         }
         adminConfig = {
           SiteConfig: {
-            SiteName: process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix',
+            SiteName: process.env.NEXT_PUBLIC_SITE_NAME || '阿赞',
             Announcement:
               process.env.ANNOUNCEMENT || '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰',
             SearchDownstreamMaxPage:
@@ -216,7 +216,7 @@ async function initConfig() {
     // 本地存储直接使用文件配置
     cachedConfig = {
       SiteConfig: {
-        SiteName: process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix',
+        SiteName: process.env.NEXT_PUBLIC_SITE_NAME || '阿赞',
         Announcement: process.env.ANNOUNCEMENT || '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰',
         SearchDownstreamMaxPage:
           Number(process.env.NEXT_PUBLIC_SEARCH_MAX_PAGE) || 5,
@@ -270,7 +270,7 @@ export async function getConfig(): Promise<AdminConfig> {
 
     // 合并一些环境变量配置
     adminConfig.SiteConfig.SiteName =
-      process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix';
+      process.env.NEXT_PUBLIC_SITE_NAME || '阿赞';
     adminConfig.SiteConfig.Announcement =
       process.env.ANNOUNCEMENT || '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰';
     
@@ -404,7 +404,7 @@ export async function resetConfig() {
   }
   const adminConfig = {
     SiteConfig: {
-      SiteName: process.env.NEXT_PUBLIC_SITE_NAME || 'JoyFlix',
+      SiteName: process.env.NEXT_PUBLIC_SITE_NAME || '阿赞',
       Announcement: process.env.ANNOUNCEMENT || '切勿分享本站，以维持使用体验哦 ʕ •ᴥ•ʔ～✰✰',
       SearchDownstreamMaxPage:
         Number(process.env.NEXT_PUBLIC_SEARCH_MAX_PAGE) || 5,
