@@ -31,8 +31,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 
   return {
-    title: siteName,
-    description: '阿赞影视',
+    title: '阿赞影视',
+    description: '在线电影网站',
     manifest: '/manifest.json',
   };
 }
