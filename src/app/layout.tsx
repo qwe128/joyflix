@@ -6,6 +6,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import { Analytics } from '@vercel/analytics/next';
+
 import { getConfig } from '@/lib/config';
 import RuntimeConfig from '@/lib/runtime';
 
@@ -130,6 +132,7 @@ export default async function RootLayout({
             <GlobalErrorIndicator />
           </SiteProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
